@@ -1,0 +1,68 @@
+# Tax Calculation App README
+
+## Overview
+
+This document provides an overview of the Tax Calculation App and its features.
+
+## Features
+
+### Tax Calculation Formula
+
+- The tax calculation works based on the following formula:
+    - Overall income (after deductions) under 8 (≤) Lakhs is not taxed.
+    - Income over 8 (>) Lakhs is taxed at different rates based on age.
+        - 30% for people with age < 40
+        - 40% for people with age ≥ 40 but < 60
+        - 10% for people with age ≥ 60
+
+### Error Handling
+
+- Users are not restricted from entering incorrect values like characters in the number fields.
+    - Errors are highlighted with an error icon to the right of the input field.
+    - Hovering over the error icon shows the error in a tooltip.
+    - Error icons are not visible in the form by default.
+
+### Age Dropdown Field
+
+- The age dropdown field has 3 values:
+    - <40
+    - ≥ 40 & < 60
+    - ≥ 60
+- If the user has not entered this value and clicks on submit, an error icon is shown indicating that the input field is mandatory.
+
+### Submit Action
+
+- Clicking on submit shows a modal displaying the final values based on the calculations.
+
+## Test Cases
+
+### Test Case 1: Overall Income ≤ 8 Lakhs (No Tax)
+
+- Description: Test with overall income less than or equal to 8 Lakhs.
+- Expected Result: No tax should be applied.
+- ![Example input Entered](/images/img4)
+- ![Test Case 1 Passed](/images/img5)
+
+### Test Case 2: Overall Income > 8 Lakhs (Tax Applied)
+
+- Description: Test with overall income greater than 8 Lakhs.
+- Expected Result: Tax should be calculated based on the formula mentioned above.
+- ![Example input Entered](/images/img1)
+- ![Test Case 2 Passed](/images/img2)
+
+### Test Case 3: Error Handling - Invalid Input
+
+- Description: Test with invalid input (characters in number fields).
+- Expected Result: Error icon should be displayed with tooltip indicating the error.
+- ![Test Case 3 Passed](/images/img3)
+
+### Test Case 4: Error Handling - Mandatory Field
+
+- Description: Test submitting without selecting age.
+- Expected Result: Error icon should be displayed indicating that the age field is mandatory.
+- ![Test Case 4 Passed](/images/img6)
+
+## Conclusion
+
+The Tax Calculation App successfully handles tax calculations, error handling, and age validation as per the requirements.
+
