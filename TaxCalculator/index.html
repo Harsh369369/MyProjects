@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Tax Calculator</h1>
+    <form id="tax-form">
+
+      <div class="form-group">
+        <div style="display: flex;">
+          <label for="gross-income">Gross Annual Income</label>
+          <span class="ques-icon"
+            data-tooltip="Gross annual income is your total salary in a year before any deductions"></span>
+        </div>
+        <input id="gross-income" placeholder="Enter gross annual income" value="100000">
+        <span class="error-icon" data-tooltip="Please enter number only"></span>
+      </div>
+
+      <div class="form-group">
+        <div style="display: flex;">
+          <label for="extra-income">Extra Income</label>
+          <span class="ques-icon" data-tooltip="Extra income is your earning other from your salary"></span>
+        </div>
+        <input id="extra-income" placeholder="Enter extra income from other sources" value="10000">
+        <span class="error-icon" data-tooltip="Please enter numbers only"></span>
+      </div>
+
+      <div class="form-group">
+        <div style="display: flex;">
+          <label for="age-group">Age Group</label>
+          <span class="ques-icon" data-tooltip="Age group is used to decide the percentage of tax applicable on you"></span>
+        </div>
+        <select type="number" id="age-group">
+          <option value="">Select the age</option>
+          <option value="&lt;40">&lt; 40</option>
+          <option value="≥40&&lt;60">≥ 40 but &lt; 60</option>
+          <option value="≥60">≥ 60</option>
+        </select>
+        <span class="error-icon" data-tooltip="Input field is mandatory"></span>
+      </div>
+
+      <div class="form-group">
+        <div style="display: flex;">
+          <label for="deductions">Total Applicable Deductions</label>
+          <span class="ques-icon" data-tooltip="Total applicable deduction is the amount which deducted from the total income"></span>
+        </div>
+        <input id="deductions" placeholder="Enter total applicable deductions" value="25000">
+        <span class="error-icon" data-tooltip="Please enter numbers only"></span>
+      </div>
+
+      <button type="submit" id="submit-btn">Calculate Tax</button>
+    </form>
+  </div>
+
+  <div id="result-modal" class="modal">
+    <div class="modal-content">
+      <div>
+        <h2>Your overall income will be</h2>
+        <h2 id="result-text"></h2>
+        <p>after tax deductions</p>
+      </div>
+      <span class="close-btn">Close</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
